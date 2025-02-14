@@ -5,10 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snake</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
   </head>
   <body>
-    <canvas id="canvas" width="400" height="400"></canvas>
-
+    <div id="overlay" style="display: none;"></div>
+    <h1>Snake</h1>
+    <main>
+      <div class="grid">
+        <div id="snake"></div>
+      </div>
+    </main> 
+    <div id="pause-alert" style="display: none">
+      <h2>Pause</h2>
+      <p>Appuyez sur la touche Espace pour reprendre.</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <script type="module" src="index.js"></script>
   </body>
 </html>
