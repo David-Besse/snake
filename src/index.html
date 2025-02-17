@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="overlay" style="display: none">
+      <div id="pause-alert">
+        <h2>Pause</h2>
+        <p>Appuyez sur la touche Espace pour reprendre.</p>
+      </div>
+    </div>
+    <h1>Snake</h1>
+    <main>
+      <div class="snake-container">
+        <div id="snake"></div>
+      </div>
+    </main>
+    <div id="score">Score: </div>
+    <div id="high-scores">
+      <h3>Meilleurs Scores (TOP 5)</h3>
+      <ul id="high-scores-list"></ul>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

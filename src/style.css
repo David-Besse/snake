@@ -22,32 +22,29 @@ h1 {
   color: #333;
 }
 
-.grid {
-  position: relative; /* Important pour le positionnement des enfants */
+.snake-container {
+  position: relative;
   padding: 0;
   margin: 0;
   background-color: #333;
-  width: 500px; /* Ajustez selon la taille de votre grille */
-  height: 500px; /* Ajustez selon la taille de votre grille */
+  width: 500px;
+  height: 500px;
 }
 
-.color-cell, .snake-segment {
+.color-cell,
+.snake-segment {
   width: 10px;
   height: 10px;
   position: absolute;
   border: none;
 }
 
-#snake {
-  z-index: 1;
-}
-
-#snake .snake-segment {
+.snake-segment {
   background-color: whitesmoke;
   border-radius: 2px;
 }
 
-#snake .snake-segment:first-child {
+.snake-segment:first-child {
   transform: scale(1.2);
 }
 
@@ -71,4 +68,18 @@ h1 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 10;
+}
+
+#score {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: black;
+}
+
+#high-scores {
+  position: absolute;
+  left: 10px;
+  top: 50px;
+  color: black;
 }

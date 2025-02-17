@@ -1,0 +1,14 @@
+{
+	"name": "snake",
+	"source": "src/index.html",
+	"scripts": {
+		"start": "parcel ./src/index.html",
+		"build": "parcel build"
+	},
+	"dependencies": {
+		"sweetalert2": "^11.17.2"
+	},
+	"devDependencies": {
+		"parcel": "^2.13.3"
+	}
+}
