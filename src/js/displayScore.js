@@ -21,7 +21,10 @@ export function displayHighScores() {
   const highScoresList = document.getElementById("high-scores-list");
   highScoresList.innerHTML = ""; // Réinitialiser la liste
 
-  game.highScores.forEach((score) => {
+  // Limiter l'affichage à 10 meilleurs scores
+  const scoresToDisplay = game.highScores.slice(0, 5);
+
+  scoresToDisplay.forEach((score) => {
     const li = document.createElement("li");
     li.textContent = score;
     highScoresList.appendChild(li);

@@ -3,6 +3,7 @@ import checkWallCollision from "./checkWallCollision.js";
 import resetGame from "./resetGame.js";
 import gameOver from "./gameOver.js";
 import growSnake from "./growSnake.js";
+import { displayScore } from "./displayScore.js";
 
 export default function moveSnake() {
   for (let i = game.snakeSegments.length - 1; i > 0; i--) {
@@ -44,6 +45,8 @@ export default function moveSnake() {
       game.snakeLength++;
       game.score += 10;
       growSnake();
+
+      displayScore();
 
       if (game.snakeSpeed > 50) game.snakeSpeed -= 10;
     }
