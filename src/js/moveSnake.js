@@ -36,7 +36,7 @@ export default function moveSnake() {
       const cellElement = document.getElementById(cell.id);
 
       if (cellElement) {
-        console.log("Removing color cell:", cellElement.id);
+        // console.log("Removing color cell:", cellElement.id);
         cellElement.remove();
       } else {
         console.log("Color cell not found:", cell.id);

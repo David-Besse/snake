@@ -1,16 +1,16 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #e0f7fa;
+  background-color: #E0E0E0;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
   margin: 0;
   justify-content: center;
+  transition: background-color 0.5s;
 }
 
 main {
-  border: 1px solid #333;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -19,17 +19,19 @@ main {
 h1 {
   font-size: 3em;
   margin-bottom: 1rem 0 1rem 0;
-  color: #ff5722;
+  color: #424242;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .snake-container {
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: #ffc107;
+  background-color: #B0BEC5;
   width: 500px;
   height: 500px;
   border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .color-cell,
@@ -41,7 +43,7 @@ h1 {
 }
 
 .snake-segment {
-  background-color: whitesmoke;
+  background-color: #FF7043;
   border-radius: 2px;
 }
 
@@ -49,15 +51,36 @@ h1 {
   transform: scale(1.2);
 }
 
-#pause-alert {
-  background-image: url('./assets/pause.png');
-  background-size: cover;
-  background-position: center;
+#overlay {
   width: 100vw;
   height: 100vh;
   z-index: 999;
   position: absolute;
-  z-index: 20;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.pause-alert {
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: #FFFFFF;
+  text-align: center;
+  padding: 15px;
+  border: 2px solid #FF7043;
+  border-radius: 15px;
+  background-color: #FF5722;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  font-size: 1.2em;
+  transition: transform 0.3s;
+}
+
+.pause-alert:hover {
+  transform: translateX(-50%) translateY(-50%) scale(1.05);
 }
 
 #score {
@@ -65,9 +88,9 @@ h1 {
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  color: #000;
+  color: #FFFFFF;
   font-size: 2em;
-  background-color: rgba(255, 193, 7, 0.8);
+  background-color: rgba(33, 150, 243, 0.9);
   padding: 10px 15px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -78,8 +101,8 @@ h1 {
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: #fff;
-  background-color: rgba(76, 175, 80, 0.8);
+  color: #FFFFFF;
+  background-color: rgba(76, 175, 80, 0.9);
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -90,6 +113,7 @@ h1 {
   margin: 0;
   font-size: 1.5em;
   text-align: center;
+  color: #FFFFFF;
 }
 
 #high-scores-list {
@@ -102,5 +126,5 @@ h1 {
   padding: 5px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;
-  color: #ffeb3b;
+  color: #424242;
 }

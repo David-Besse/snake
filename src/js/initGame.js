@@ -15,8 +15,8 @@ export default function initGame() {
       if (event.code === "Space") {
         game.isPaused = !game.isPaused;
   
-        document.getElementById("pause-alert").style.display = game.isPaused
-          ? "block"
+        document.getElementById("overlay").style.display = game.isPaused
+          ? "block "
           : "none";
   
         clearInterval(game.gameInterval);
